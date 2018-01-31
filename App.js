@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
+
 import Login from './Components/Login';
 import Register from './Components/Register';
+import EventOwner from './Components/EventOwner';
 import EventPage from './Components/EventPage';
+
 
 export default class App extends React.Component{
   render(){
@@ -22,6 +25,12 @@ export default class App extends React.Component{
             hideNavBar={true}
             key='Register'
             title='Register'
+          />
+          <Scene
+            component={EventOwner}
+            hideNavBar={true}
+            key='EventOwner'
+            title='Event Owner'
           />
           <Scene
             component={EventPage}
